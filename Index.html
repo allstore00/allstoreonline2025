@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All store(Eletrônicos e acessórios)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="logo">All Store online</h1>
+    <div class="actions">
+      <a href="https://instagram.com/all.store_original" target="_blank" class="btn icon">
+        <i class="fab fa-instagram"></i>
+    </a>
+      <button id="menuIcon" class="btn icon">☰</button>
+      <button id="cartIcon" class="btn icon">🛒</button>
+    </div>
+  </header>
+
+  <!-- Menu de categorias (desliza para baixo) -->
+  <nav id="menuCategorias" class="dropdown">
+    <div class="dropdown-inner">
+      <button class="btn full" onclick="filtrarCategoria('todos')">Todos</button>
+      <button class="btn full" onclick="filtrarCategoria('carregadores')">Carregadores</button>
+      <button class="btn full" onclick="filtrarCategoria('cabos')">Cabos</button>
+      <button class="btn full" onclick="filtrarCategoria('fones')">Fones/Headphones</button>
+    </div>
+  </nav>
+
+  <!-- Carrinho (desliza para baixo e fica no topo) -->
+  <section id="carrinho" class="cart dropdown">
+    <div class="dropdown-inner">
+      <div class="cart-header">
+        <h2>Seu Carrinho</h2>
+        <button id="fecharCarrinho" class="btn danger small">✖</button>
+      </div>
+      <ul id="listaCarrinho" class="cart-list"></ul>
+      <button id="finalizar" class="btn success full">Finalizar no WhatsApp</button>
+    </div>
+  </section>
+
+  <main class="content">
+    <section id="produtos" class="grid"></section>
+  </main>
+
+  <footer class="footer">
+    <p>All Store - Eletrônicos e acessórios (Cáceres/MT) by 2025</p>
+    <p>📌
+Avenida Talhamares 
+<br>Número: 946
+<br>Rua : Santa Isabel 
+<br>Referência : do lado da academia Power On</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
