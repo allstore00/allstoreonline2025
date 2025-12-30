@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+
   <header class="topbar">
     <h1 class="logo">All Store online</h1>
     <div class="actions">
@@ -52,8 +53,97 @@ Avenida Talhamares
 <br>Número: 946
 <br>Rua : Santa Isabel 
 <br>Referência : do lado da academia Power On</p>
+
+ <a href="https://maps.app.goo.gl/26ieS6TuSgUxMH1x8" title="Localização no mapa">
+        <img src="https://firebasestorage.googleapis.com/v0/b/mensal-66e32.appspot.com/o/img%20loja%20online%2FScreenshot_20251230-140450%20(1).png?alt=media&token=b9200dde-1472-4b55-90c3-5b61c32adabd" 
+        alt="Localização da loja" width="200" height="180" style="border: 2px solid #000;">
+    </a>
+    <p>All Store - Eletrônicos e acessórios (Cáceres/MT) by 2025</p>
   </footer>
 
   <script src="script.js"></script>
+
+  <style>
+   
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden; 
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 999;
+    }
+
+  
+    .overlay.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+   
+    .popup {
+        background: #706c6c;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        max-width: 300px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .popup h2 {
+        margin-top: 0;
+        font-size: 18px;
+    }
+
+   
+    .popup button {
+        margin-top: 15px;
+        padding: 8px 16px;
+        background: #007BFF;
+        color: rgb(255, 255, 255);
+         font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .popup button:hover {
+        background: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+
+<div class="overlay" id="popupOverlay">
+    <div class="popup">
+        <h2>Aviso !</h2>
+        <p>As taxas de entrega varia de R$:10 a R$:15</p>
+        <p>Segunda a sexta: 08:00 as 19:00<br>
+     Sabado: 08:00 as 12:00</p>
+        <button id="btnOk">OK</button>
+    </div>
+</div>
+
+<script>
+    // Exibe o popup ao carregar a página
+    window.addEventListener('load', function() {
+        document.getElementById('popupOverlay').classList.add('active');
+    });
+
+    // Fecha o popup ao clicar no botão OK
+    document.getElementById('btnOk').addEventListener('click', function() {
+        document.getElementById('popupOverlay').classList.remove('active');
+    });
+</script>
+
 </body>
 </html>
